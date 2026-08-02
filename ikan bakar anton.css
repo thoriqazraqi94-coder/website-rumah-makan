@@ -1,0 +1,9 @@
+:root {
+    --primary-color: #C0392B;    /* Merah bumbu rempah */
+    --secondary-color: #F1C40F;  /* Kuning kunyit */
+    --accent-color: #27AE60;     /* Hijau daun pisang */
+    --dark-color: #3E2723;       /* Coklat tua kayu */
+    --light-color: #F5F5F5;      /* Krem bersih */
+    --text-color: #212121;       /* Abu-abu gelap */
+    --white-color: #FFFFFF;      /* Putih */
+}

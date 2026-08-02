@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rumah Makan Ikan Bakar Anton - Seafood Segar & Lezat</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        .hero-bg {
+            background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1535140728325-a4d3707eee94?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .menu-img {
+            transition: transform 0.5s ease;
+        }
+        .menu-card:hover .menu-img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white flex items-center gap-2">
+                <i class="fas fa-fish text-orange-500"></i> Ikan Bakar Anton
+            </a>
+            <ul class="hidden md:flex space-x-8 text-white font-medium">
+                <li><a href="#home" class="hover:text-orange-500 transition">Beranda</a></li>
+                <li><a href="#tentang" class="hover:text-orange-500 transition">Tentang Kami</a></li>
+                <li><a href="#menu" class="hover:text-orange-500 transition">Menu</a></li>
+                <li><a href="#galeri" class="hover:text-orange-500 transition">Galeri</a></li>
+                <li><a href="#kontak" class="hover:text-orange-500 transition">Kontak</a></li>
+            </ul>
+            <a href="#kontak" class="hidden md:block bg-orange-600 hover:bg-orange-700 text-white px-5 py-2 rounded-full transition">Pesan Tempat</a>
+            <button id="menu-btn" class="md:hidden text-white text-2xl"><i class="fas fa-bars"></i></button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 bg-opacity-95 mt-4 pb-4">
+            <ul class="flex flex-col items-center space-y-4 text-white font-medium pt-4">
+                <li><a href="#home" class="hover:text-orange-500">Beranda</a></li>
+                <li><a href="#tentang" class="hover:text-orange-500">Tentang Kami</a></li>
+                <li><a href="#menu" class="hover:text-orange-500">Menu</a></li>
+                <li><a href="#galeri" class="hover:text-orange-500">Galeri</a></li>
+                <li><a href="#kontak" class="hover:text-orange-500">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero-bg h-screen flex items-center justify-center text-center">
+        <div class="px-6 max-w-3xl">
+            <p class="text-orange-500 uppercase tracking-widest mb-4 font-medium">Aroma Bakar & Cita Rasa Asli</p>
+            <h1 class="text-4xl md:text-6xl text-white font-bold mb-6 leading-tight">Ikan Bakar Anton<br>Segar, Harum, & Bikin Nagih</h1>
+            <p class="text-slate-200 text-lg mb-8">Menyajikan seafood dan ikan bakar pilihan dengan bumbu rempah khas dan sambal dabu-dabu yang menggugah selera. Dari tambak langsung ke meja Anda!</p>
+            <a href="#menu" class="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-full font-semibold transition duration-300 transform hover:scale-105 shadow-lg">Lihat Menu Kami</a>
+        </div>
+    </header>
+
+    <!-- Tentang Kami -->
+    <section id="tentang" class="py-20 bg-white">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQueGlYll1wu6U7IhAdMUG1iCfpxKnuWbvgIFWF3XjibQ&s=10" alt="Proses Pembakaran Ikan" class="rounded-2xl shadow-xl w-full h-[400px] object-cover">
+            </div>
+            <div class="md:w-1/2">
+                <p class="text-orange-600 font-semibold uppercase tracking-wider mb-2">Tentang Kami</p>
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-slate-800">Warung Bakar dengan Bahan Segar Pilihan</h2>
+                <p class="text-slate-600 leading-relaxed mb-4">Rumah Makan Ikan Bakar Anton didirikan dengan satu visi: menyajikan hidangan laut terbaik dengan rasa yang otentik. Kami bangga dengan ikan-ikan segar kami yang diolah langsung setelah dipesan.</p>
+                <p class="text-slate-600 leading-relaxed mb-6">Dibakar di atas bara arang asli, dilumuri bumbu racikan rahasia keluarga, dan disajikan dengan sambal terpedas dan paling nikmat di kota.</p>
+                <div class="flex gap-8">
+                    <div>
+                        <h3 class="text-3xl font-bold text-orange-600">100%</h3>
+                        <p class="text-slate-500">Ikan Segar</p>
+                    </div>
+                    <div>
+                        <h3 class="text-3xl font-bold text-orange-600">Asli</h3>
+                        <p class="text-slate-500">Bakar Arang</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Favorit -->
+    <section id="menu" class="py-20 bg-slate-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <p class="text-orange-600 font-semibold uppercase tracking-wider mb-2">Spesialitas Anton</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-800">Menu Unggulan Kami</h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Menu Item 1: Ikan Nila Bakar -->
+                <div class="menu-card bg-white rounded-2xl overflow-hidden shadow-lg group">
+                    <div class="overflow-hidden h-56">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQU7fEXJYhudrJAWhndvXQVIugxKnXlJ3UFzXyputGLUA&s=10" alt="Ikan Bakar" class="menu-img w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-xl font-bold text-slate-800">Ikan Nila Bakar </h3>
+                            <span class="text-orange-600 font-bold">Rp 30.000</span>
+                        </div>
+                        <p class="text-slate-500 text-sm">Ikan segar dibakar dengan bumbu khas yang pedas menggigit.</p>
+                    </div>
+                </div>
+                <!-- Menu Item 2: Ikan Gurame Bakar-->
+                <div class="menu-card bg-white rounded-2xl overflow-hidden shadow-lg group">
+                    <div class="overflow-hidden h-56">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkICg0dO2MtBTn9tX7pAdx9NP02uPBJSmKjMUstj1aoQ&s" alt="Plecing Kangkung" class="menu-img w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-xl font-bold text-slate-800">Ikan Gurame Bakar</h3>
+                            <span class="text-orange-600 font-bold">Rp 75.000</span>
+                        </div>
+                        <p class="text-slate-500 text-sm">Ikan gurame bakar dibumbui dengan bumbu khas yang berempah dan dibakar dengan bara arang yang panas.</p>
+                    </div>
+                </div>
+                <!-- Menu Item 3: Ikan Patin Bakar-->
+                <div class="menu-card bg-white rounded-2xl overflow-hidden shadow-lg group">
+                    <div class="overflow-hidden h-56">
+                        <img src="https://images.openai.com/static-rsc-4/5QSrHW6p_Sx6XI0GGOx7HIk8CeIogjBTlyJeozhqbcsPLgkMA-udiWNZkyzUIrRhJVb_n51K7Hks4TIR3B7dWg_coVRyaz3pnjDsudNsyVYzRqVLlOEd6fXFfpSRNeB-Spv--TqJTm1o3qvq2kT4Mqb_3dprTbxIVKbrT2-kPIE?purpose=inline" alt="Plecing Kangkung" class="menu-img w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-xl font-bold text-slate-800">Ikan Patin Bakar</h3>
+                            <span class="text-orange-600 font-bold">Rp 45.000</span>
+                        </div>
+                        <p class="text-slate-500 text-sm">Ikan patin bakar dibumbui dengan bumbu khas yang berempah dan dibakar dengan bara arang yang panas.</p>
+                    </div>
+                </div>
+                <!-- Menu Item 4: Ikan Bawal Bakar -->
+                <div class="menu-card bg-white rounded-2xl overflow-hidden shadow-lg group">
+                    <div class="overflow-hidden h-56">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa1JYIwARpH9S-ymOXfXSWXAh-K_7NOMUEVE43gM6Hkg&s=10" alt="Sambal Dabu-Dabu" class="menu-img w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-xl font-bold text-slate-800">Ikan Bawal bakar</h3>
+                            <span class="text-orange-600 font-bold">Rp 75.000</span>
+                        </div>
+                        <p class="text-slate-500 text-sm">Sambal mentah khas Manado, segar, pedas, dan wajib ada di meja makan Anda.</p>
+                    </div>
+                </div>
+                <!-- Menu Item 5: Ayam Bakar -->
+                <div class="menu-card bg-white rounded-2xl overflow-hidden shadow-lg group">
+                    <div class="overflow-hidden h-56">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9YxJt9gbKw57UjtkQHJmJyKyZNW30X-5Yb0mqhlbuZA&s=10" alt="Cumi Bakar" class="menu-img w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-xl font-bold text-slate-800">Ayam Bakar </h3>
+                            <span class="text-orange-600 font-bold">Rp 25.000</span>
+                        </div>
+                        <p class="text-slate-500 text-sm">Ayam bakar disempurna dan disiram bumbu yang kaya akan rempah.</p>
+                    </div>
+                </div>
+                <!-- Menu Item 6: Udang Bakar -->
+                <div class="menu-card bg-white rounded-2xl overflow-hidden shadow-lg group">
+                    <div class="overflow-hidden h-56">
+                        <img src="https://images.openai.com/static-rsc-4/6INWlnqCsLlJNo5g8vzOzpkNnw2Thie-Nud9uUoOfL-Xey6WUeP3riiLllIoDzt92zlkFG6US8l-6EY7h1sCVEpEZhFWQAALyCNotrGs7NXxTkAQt9hKgnu-UZUlxFD2_rLlXg_57Z4UI1AruKpWHW0IZAk7fVhTkffVpcogaoo?purpose=inline" alt="Udang Saus Padang" class="menu-img w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-xl font-bold text-slate-800">Udang Bakar </h3>
+                            <span class="text-orange-600 font-bold">Rp 45.000</span>
+                        </div>
+                        <p class="text-slate-500 text-sm">Udang besar dibakar dengan olesan bumbu khas rempah.</p>
+                    </div>
+                </div>
+                <!-- Menu Item 7: Cumi -->
+                <div class="menu-card bg-white rounded-2xl overflow-hidden shadow-lg group">
+                    <div class="overflow-hidden h-56">
+                        <img src="https://images.openai.com/static-rsc-4/5Ko3HyGFqJbxd6yLuHMpfbI8oQ0bE6XgCBCrtBCPOKwr7uBo3OSDHc0b5eXNdb4Wyqjg2ktYLiHSHff99LtoFkOmdmrDZ4JY6gzcgNC0T0FZot11gEcdbCvp9UVRv6AMNOxnPOfx3FFFz42wuqAWZWSVzRWP28Iuic_LRfsAKzc?purpose=inline" alt="Kerang Dara" class="menu-img w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-xl font-bold text-slate-800">Cumi Bakar</h3>
+                            <span class="text-orange-600 font-bold">Rp 40.000</span>
+                        </div>
+                        <p class="text-slate-500 text-sm">Cumi bakar yang dibakar dengan sempurna dan dioleskan dengan bumbu kahas dan kaya rempah.</p>
+                    </div>
+                </div>
+                <!-- Menu Item 8: Ikan Gurame Goreng -->
+                <div class="menu-card bg-white rounded-2xl overflow-hidden shadow-lg group">
+                    <div class="overflow-hidden h-56">
+                        <img src="https://images.openai.com/static-rsc-4/3CiG46I1ZbLFzZM-Wa3ADhSaBxF3dSpX-1pQdL42pc6J7QtXLItKxHPW4wYlpL1V9vHEauCKhSa8DRO1kVN--eh1Ql4XZ40R6KhBcWNdxZxWKkjPc1NwDU0wEcZ561LWqYwp-vOtGj0xbbrphY7Xry0waoMMryWWfnxsl1KbGFE?purpose=inline" alt="Sambal Dabu-Dabu" class="menu-img w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-xl font-bold text-slate-800">Ikan Gurame Goreng</h3>
+                            <span class="text-orange-600 font-bold">Rp 75.000</span>
+                        </div>
+                        <p class="text-slate-500 text-sm">Gurame goreng renyah disajikan bersama sambal, timun, dan tomat.</p>
+                    </div>
+                </div>
+                <!-- Menu Item 9: Ikan Nila Goreng -->
+                <div class="menu-card bg-white rounded-2xl overflow-hidden shadow-lg group">
+                    <div class="overflow-hidden h-56">
+                        <img src="https://images.openai.com/static-rsc-4/OvD9HDXXmU4_3qEpz-70B21zLrnfR5YLZvlVe13x1MvIvNSBKbjSUdwEi8pkGhE0kGArQpRfuXy7a9JKXz1-lD09heioEbq3My_Qqk60Kh6KaUfpkvv0hbt5H3yIBQqgm_EO7B2hzAUXrRW43gi6nJail0_co4Luv6whA_jyxVx3UluscragkEWHmpyl1CaC?purpose=inline" alt="Sambal Dabu-Dabu" class="menu-img w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-xl font-bold text-slate-800">Ikan Nila Goreng</h3>
+                            <span class="text-orange-600 font-bold">Rp 25.000</span>
+                        </div>
+                        <p class="text-slate-500 text-sm">Sambal mentah khas Manado, segar, pedas, dan wajib ada di meja makan Anda.</p>
+                    </div>
+                </div>
+                <!-- Menu Item 10: Ayam Kampung Goreng -->
+                <div class="menu-card bg-white rounded-2xl overflow-hidden shadow-lg group">
+                    <div class="overflow-hidden h-56">
+                        <img src="https://images.openai.com/static-rsc-4/mm7S5WhARBb9uFCMt5aJOtgXcoa8aYLtaQ-INegWnR1yO4kno-zMVWQOPVRbwDJ0VUMjmFqeOzBP3SBSZT_26PTKQ5rxyEOL6nttKOC5GZOn0VzVARxaj_CZSkDgVRSzZrHJs-RXLkKJmzz6Djfd8pv2CTRc9iF4lSk_JuMTkBQ?purpose=inline" alt="Plecing Kangkung" class="menu-img w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-xl font-bold text-slate-800">Ayam Kampung Goreng</h3>
+                            <span class="text-orange-600 font-bold">Rp 18.000</span>
+                        </div>
+                        <p class="text-slate-500 text-sm">Ayam kampung yang dimarinasi semalaman agar bumbu khasnya menyerap dengan sempurna dan digoreng denngan garing .</p>
+                    </div>
+                </div>
+                <!-- Menu Item 11: Udang Goreng Tepung -->
+                <div class="menu-card bg-white rounded-2xl overflow-hidden shadow-lg group">
+                    <div class="overflow-hidden h-56">
+                        <img src="https://images.openai.com/static-rsc-4/XSwDzWNvBBOxTjU7ZGT_GVwkWlJOxBAdafns-gziIYEhxmTgpW1onbGFRUWlq0QpSpVzgBiFljFMEnbEuBkn6VXEelzm5ahVrZKDXBB9VOKFfJRyNgxyeg3owm3pHbTahhNA-T02n6CdAbCNe8iGNLIcZDy4Sq3cXnCO0CDSzPw?purpose=inline" alt="Plecing Kangkung" class="menu-img w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-xl font-bold text-slate-800">Udang Goreng Tepung</h3>
+                            <span class="text-orange-600 font-bold">Rp 40.000</span>
+                        </div>
+                        <p class="text-slate-500 text-sm">Udang goreng yang dilapisi oleh tepung yang super kriuk.</p>
+                    </div>
+                </div>
+                <!-- Menu Item 12: Tahu Goreng -->
+                <div class="menu-card bg-white rounded-2xl overflow-hidden shadow-lg group">
+                    <div class="overflow-hidden h-56">
+                        <img src="https://images.openai.com/static-rsc-4/6i7zLBCXI6tlzan6Za-EWLuklNRpCaEvbnFoKuakFuIpwiFdwOmg2SUl6-PUScrNOH3KoOolwYjMIL1zbTLiICSJhPiAICHrUpy37pE1KAmmq0_mwxR7PW654q0aBriLw8O93WySkK783-Qrly0U9HgPi61Px0UZlfv159UKBZM?purpose=inline" alt="Plecing Kangkung" class="menu-img w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-xl font-bold text-slate-800">Tahu Goreng</h3>
+                            <span class="text-orange-600 font-bold">Rp 10.000</span>
+                        </div>
+                        <p class="text-slate-500 text-sm">Tahu goreng yang enak dan digoreng denngan garing .</p>
+                    </div>
+                </div>
+                 <!-- Menu Item 13: Tempe Goreng -->
+                <div class="menu-card bg-white rounded-2xl overflow-hidden shadow-lg group">
+                    <div class="overflow-hidden h-56">
+                        <img src="https://images.openai.com/static-rsc-4/oMieJ9EDGLYiVFO_4D1gHHlJLY_eAQnl6i_Lg34zCjr8QGPo4JGwqQES0yw_dirSX8eyNuleiSrsHXVvfwjBYnqC0-7bzslZ9QUmqX5QIesqFazAJtVD3ahoIrdsSp7pMJXaLodXBmkqqEXYHB5UHqcmAqQFsmmq-rruGiZAM9o?purpose=inline" alt="Plecing Kangkung" class="menu-img w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-xl font-bold text-slate-800">Tempe Goreng</h3>
+                            <span class="text-orange-600 font-bold">Rp 10.000</span>
+                        </div>
+                        <p class="text-slate-500 text-sm">Tempe goreng renyah dengan warna keemasan dan penyajian yang rapi.</p>
+                    </div>
+                </div>
+                <!-- Menu Item 14: Tumis Kangkung -->
+                <div class="menu-card bg-white rounded-2xl overflow-hidden shadow-lg group">
+                    <div class="overflow-hidden h-56">
+                        <img src="https://images.openai.com/static-rsc-4/GE-xOotYlHsBQlLsWq6oaHV0P9myZ53HKOXpoD0vVDv5CaG25k_w3EWfh4R3BQx55qQet90RRe_tJY6ITjzhYMDFe3NzBin3clOUhQQS598GZryg6cDEBIgLnqxspRGMvCoEpbVkGuOJSUiOtsKQLzQ4ZRCk0CIcVcpskHO2I8Y?purpose=inline" alt="Plecing Kangkung" class="menu-img w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-xl font-bold text-slate-800">Tumis Kangkung</h3>
+                            <span class="text-orange-600 font-bold">Rp 15.000</span>
+                        </div>
+                        <p class="text-slate-500 text-sm">Kangkung ditumis segar dengan sambal tomat khas yang pedas dan menyegarkan.</p>
+                    </div>
+                </div>
+                <!-- Menu Item 15: Tumis Tauge -->
+                <div class="menu-card bg-white rounded-2xl overflow-hidden shadow-lg group">
+                    <div class="overflow-hidden h-56">
+                        <img src="https://images.openai.com/static-rsc-4/ldbeOeeEZMH7XZYCD3SQgFAwBxv7DVeF2M_Z1R_Zt3hv9lgIL4dCUR_FGdLsGA9A10Yx792m5j0G3F2A6yYjEH43LDyqwNuZzEYJMFCubZVPNYDmwdMMy6bHafSMKlFjlJznvlLSsqW43rsqeM_9Xu9cpe0J_PzSxK2CXsdGMos?purpose=inline" alt="Plecing Kangkung" class="menu-img w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-xl font-bold text-slate-800">Tumis Tauge</h3>
+                            <span class="text-orange-600 font-bold">Rp 12.000</span>
+                        </div>
+                        <p class="text-slate-500 text-sm">Tauge ditumis segar dengan sambal tomat khas yang pedas dan menyegarkan.</p>
+                    </div>
+                </div>
+                <!-- Menu Item 16: Cah Sawi -->
+                <div class="menu-card bg-white rounded-2xl overflow-hidden shadow-lg group">
+                    <div class="overflow-hidden h-56">
+                        <img src="https://images.openai.com/static-rsc-4/vTwDzP8qJ0E_Dp4E8Wx1-j2keQWJR56o3vEo0xHWoMbsXeV1PJ4gCkPMTmmFDYALs_82pKnhTOFExmbz9tdMTnJSzP9grnM6fHlAMa6Hlf1Gc92nRT1EV4GrX9Txcn3xJy88BqmBPWpBQzx21aaQH4hX3mWok3qc6y5v3RdRd_s?purpose=inline" alt="Plecing Kangkung" class="menu-img w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-xl font-bold text-slate-800">Cah Sawi</h3>
+                            <span class="text-orange-600 font-bold">Rp 15.000</span>
+                        </div>
+                        <p class="text-slate-500 text-sm">Cah sawi yang hijau denagn bawang putih, tampil sederhana namun mengguga selera.</p>
+                    </div>
+                </div>
+                <!-- Menu Item 17: Es Teh -->
+                <div class="menu-card bg-white rounded-2xl overflow-hidden shadow-lg group">
+                    <div class="overflow-hidden h-56">
+                        <img src="https://images.openai.com/static-rsc-4/vA-VwrOiOHwvbB3t7egnr-a-xgNaRSG1p4oyno1rySMlxEHztw6ulYbRATbYR7pJB0CxUMtg4vqu1hBs4e2RC6M8CV3qB_YEHmyKiRqq9r4kcEYnQpLVZ4vf3QqJnFhOuLqlqOfaSskSTrLwJ7ypX__Ocvh28hPXc0g8m7tI8mc?purpose=inline" alt="Plecing Kangkung" class="menu-img w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-xl font-bold text-slate-800">Es Teh</h3>
+                            <span class="text-orange-600 font-bold">Rp 7.000</span>
+                        </div>
+                        <p class="text-slate-500 text-sm">Es teh hangat di cangkir kaca dengan warna teh keemasan yang menarik.</p>
+                    </div>
+                </div>
+                <!-- Menu Item 18: Teh Hangat -->
+                <div class="menu-card bg-white rounded-2xl overflow-hidden shadow-lg group">
+                    <div class="overflow-hidden h-56">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvVjp57XA6jU-JbQBlGYqN0rovL333V3kr2Fn8KP7MiA&s=10" alt="Plecing Kangkung" class="menu-img w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-xl font-bold text-slate-800">Teh Hangat</h3>
+                            <span class="text-orange-600 font-bold">Rp 5.000</span>
+                        </div>
+                        <p class="text-slate-500 text-sm">Teh hangat dalam gelas bening dengan uap yang masih terlihat, memberikan kesan baru diseduh.</p>
+                    </div>
+                </div>
+                <!-- Menu Item 19: Es Jeruk -->
+                <div class="menu-card bg-white rounded-2xl overflow-hidden shadow-lg group">
+                    <div class="overflow-hidden h-56">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkiXU-72tOS-feoA5Ary_hUV79I4GzvnRUQVTKfRPfcg&s=10" alt="Plecing Kangkung" class="menu-img w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-xl font-bold text-slate-800">Es Jeruk</h3>
+                            <span class="text-orange-600 font-bold">Rp 8.000</span>
+                        </div>
+                        <p class="text-slate-500 text-sm">Es jeruk yang menggugah selera untuk dinimati.</p>
+                    </div>
+                </div>
+                <!-- Menu Item 20: Jeruk Hangat -->
+                <div class="menu-card bg-white rounded-2xl overflow-hidden shadow-lg group">
+                    <div class="overflow-hidden h-56">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8eIC3oDjZqTG_9uPjc_O1xH-N4grgGPLzKbwgXgSSzA&s=10" alt="Plecing Kangkung" class="menu-img w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-xl font-bold text-slate-800">Jeruk Hangat</h3>
+                            <span class="text-orange-600 font-bold">Rp 8.000</span>
+                        </div>
+                        <p class="text-slate-500 text-sm">Jeruk hangat dalam gelas bening dengan uap yang masih terlihat, memberikan kesan baru diseduh.</p>
+                    </div>
+                </div>
+                <!-- Menu Item 21: Air Mineral -->
+                <div class="menu-card bg-white rounded-2xl overflow-hidden shadow-lg group">
+                    <div class="overflow-hidden h-56">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv8--_DzIT-lgnb5Gkoofw-_IKNJ9V20SRPeCae2gZRQ&s=10" alt="Plecing Kangkung" class="menu-img w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-xl font-bold text-slate-800">Air Mineral</h3>
+                            <span class="text-orange-600 font-bold">Rp 5.000</span>
+                        </div>
+                        <p class="text-slate-500 text-sm">Air mineral sangat bagus untuk kesehatan tubuh.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeri -->
+    <section id="galeri" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <p class="text-orange-600 font-semibold uppercase tracking-wider mb-2">Suasana & Hidangan</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-800">Galeri Ikan Bakar Anton</h2>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5qZlXQpSFlVYKZQcz528Tm1azYY24v5EJzNFpVPQa_g&s=10" alt="Suasana Restoran" class="w-full h-48 object-cover rounded-lg shadow-md hover:shadow-xl transition">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS3vZuH-fyAKZoiGbxEKr-jvgYbk3UzfSlMcGUO5zBWw&s=10" alt="Ikan Bakar" class="w-full h-48 object-cover rounded-lg shadow-md hover:shadow-xl transition">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQueGlYll1wu6U7IhAdMUG1iCfpxKnuWbvgIFWF3XjibQ&s=10" alt="Meja Makan" class="w-full h-48 object-cover rounded-lg shadow-md hover:shadow-xl transition">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwbZyhtGs7_31UsKrHcTIp2CbEmeatTke6upJM_muvdg&s=10" alt="Sajian Laut" class="w-full h-48 object-cover rounded-lg shadow-md hover:shadow-xl transition">
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontak & Lokasi -->
+    <section id="kontak" class="py-20 bg-slate-900 text-white">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <p class="text-orange-500 font-semibold uppercase tracking-wider mb-2">Hubungi Kami</p>
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Mampir & Cicipi Sekarang</h2>
+                <div class="space-y-4 text-slate-300">
+                    <p class="flex items-center gap-4"><i class="fas fa-map-marker-alt text-orange-500 text-xl w-6"></i> Jl. Paangeran Antasari, Talang Banjar, Kec.Jambi Timur, Jambi Indonesia</p>
+                    <p class="flex items-center gap-4"><i class="fas fa-phone text-orange-500 text-xl w-6"></i> 081366657707</p>
+                    <p class="flex items-center gap-4"><i class="fas fa-clock text-orange-500 text-xl w-6"></i> Buka Setiap Hari: 10:00 - 22:00 WIB</p>
+                    <p class="flex items-center gap-4"><i class="fas fa-envelope text-orange-500 text-xl w-6"></i> info@ikanbakaranton.com</p>
+                </div>
+                <a href="https://wa.me/6281366657707" target="_blank" class="inline-block mt-8 bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-full font-semibold transition shadow-lg">
+                    <i class="fab fa-whatsapp mr-2"></i> Pesan via WhatsApp
+                </a>
+            </div>
+            <div class="rounded-2xl overflow-hidden shadow-2xl border-4 border-slate-700">
+                <!-- Ganti src dengan link Google Maps Embed dari rumah makan Ikan Bakar Anton -->
+                <iframe src="https://maps.app.goo.gl/JWKeShficSuihuzt5?g_st=iw" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800 text-slate-400 py-8 text-center">
+        <div class="container mx-auto px-6">
+            <p>&copy; 2024 Rumah Makan Ikan Bakar Anton. All Rights Reserved.</p>
+            <div class="flex justify-center space-x-6 mt-4">
+                <a href="#" class="hover:text-orange-500 transition"><i class="fab fa-instagram text-2xl"></i></a>
+                <a href="#" class="hover:text-orange-500 transition"><i class="fab fa-facebook text-2xl"></i></a>
+                <a href="#" class="hover:text-orange-500 transition"><i class="fab fa-tiktok text-2xl"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript untuk Navbar & Mobile Menu -->
+    <script>
+        const navbar = document.getElementById('navbar');
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        // Efek scroll navbar
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-slate-900', 'shadow-lg', 'py-2');
+                navbar.classList.remove('py-4', 'bg-transparent');
+            } else {
+                navbar.classList.remove('bg-slate-900', 'shadow-lg', 'py-2');
+                navbar.classList.add('py-4', 'bg-transparent');
+            }
+        });
+
+        // Toggle mobile menu
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
