@@ -1,0 +1,309 @@
+:root {
+    --primary: #ff6b81;
+    --secondary: #ffd1dc;
+    --bg: #1a1a2e;
+    --text: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #2e1a47, #1a1a2e, #4a1a3b);
+    color: var(--text);
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* === LAYAR LOGIN KEKINIAN === */
+#login-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    padding: 20px;
+}
+
+.login-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 40px 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.login-card h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    color: var(--secondary);
+    margin-bottom: 10px;
+}
+
+.login-card p {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 30px;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+    color: var(--secondary);
+    font-weight: 500;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 15px rgba(255, 107, 129, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.login-btn {
+    width: 100%;
+    background: linear-gradient(45deg, var(--primary), #ff9ff3);
+    border: none;
+    padding: 15px;
+    border-radius: 12px;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-top: 10px;
+}
+
+.login-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(255, 107, 129, 0.4);
+}
+
+.error-msg {
+    color: #ff4757;
+    font-size: 0.85rem;
+    margin-top: 15px;
+    display: none;
+    animation: shake 0.4s ease;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-8px); }
+    75% { transform: translateX(8px); }
+}
+
+/* === LAYAR PEMBUKA (KADO) === */
+#intro-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--bg);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.gift-box {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gift-box:hover { transform: scale(1.1); }
+
+.gift-base {
+    width: 150px;
+    height: 120px;
+    background: var(--primary);
+    position: absolute;
+    bottom: 0;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.gift-lid {
+    width: 170px;
+    height: 40px;
+    background: #ff4757;
+    position: absolute;
+    top: 10px;
+    left: -10px;
+    border-radius: 5px;
+    transform-origin: left center;
+    transition: transform 0.5s ease;
+}
+
+.gift-ribbon-v {
+    width: 20px;
+    height: 100%;
+    background: #f1c40f;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.gift-box.opened .gift-lid { transform: rotateZ(-110deg); }
+
+.gift-bow {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    color: #f1c40f;
+    z-index: 2;
+}
+
+#intro-text {
+    margin-top: 30px;
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+}
+
+/* === KONTEN UTAMA === */
+#main-content {
+    display: none;
+    opacity: 0;
+    transition: opacity 2s ease;
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.5rem;
+    color: var(--secondary);
+    text-shadow: 0 0 20px rgba(255, 209, 220, 0.5);
+    margin-bottom: 10px;
+}
+
+.section {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    animation: fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Kue Ulang Tahun */
+.cake-container { position: relative; margin: 40px 0; }
+.plate {
+    width: 250px; height: 20px; background: #ddd;
+    border-radius: 50%; position: absolute; bottom: -10px; left: -25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.cake {
+    width: 200px; height: 150px;
+    background: linear-gradient(to bottom, #ff9ff3 0%, #ff9ff3 40%, #feca57 40%, #feca57 100%);
+    position: relative; margin: 0 auto; border-radius: 10px;
+}
+.cake::before {
+    content: ''; position: absolute; top: 60px; left: 0; right: 0;
+    height: 10px; background: #ff6b81; border-radius: 5px;
+}
+.candle {
+    width: 10px; height: 40px;
+    background: linear-gradient(to right, #ff9ff3 0%, #ff6b81 50%, #ff9ff3 100%);
+    position: absolute; top: -40px; left: 50%; transform: translateX(-50%); border-radius: 2px;
+}
+.flame {
+    width: 12px; height: 25px;
+    background: radial-gradient(circle, #fff 0%, #ffeb3b 40%, #ff9800 100%);
+    border-radius: 50% 50% 20% 20%; position: absolute; top: -25px; left: 50%;
+    transform: translateX(-50%); animation: flicker 0.5s infinite alternate; box-shadow: 0 0 20px #ff9800;
+}
+@keyframes flicker {
+    0% { transform: translateX(-50%) scale(1); }
+    100% { transform: translateX(-50%) scale(1.1); }
+}
+
+/* Galeri Foto */
+.gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-top: 20px; }
+.gallery img {
+    width: 200px; height: 200px; object-fit: cover; border-radius: 15px;
+    border: 3px solid var(--secondary); transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer;
+}
+.gallery img:hover { transform: scale(1.05); box-shadow: 0 0 25px rgba(255, 209, 220, 0.6); }
+
+/* Tombol Kejutan */
+.surprise-btn {
+    background: linear-gradient(45deg, #ff6b81, #ff9ff3); border: none; padding: 15px 40px;
+    font-size: 1.1rem; color: white; border-radius: 30px; cursor: pointer; font-weight: 600;
+    margin-top: 20px; box-shadow: 0 5px 20px rgba(255, 107, 129, 0.4); transition: all 0.3s ease;
+}
+.surprise-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(255, 107, 129, 0.6); }
+.hidden-message {
+    display: none; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px);
+    padding: 30px; border-radius: 20px; margin-top: 20px; max-width: 600px; border: 1px solid rgba(255,255,255,0.2);
+}
+
+/* Tombol Musik */
+#music-toggle {
+    position: fixed; top: 20px; right: 20px; width: 50px; height: 50px; border-radius: 50%;
+    background: rgba(255,255,255,0.2); border: none; color: white; font-size: 20px; cursor: pointer;
+    z-index: 100; display: none; align-items: center; justify-content: center;
+    backdrop-filter: blur(5px); transition: background 0.3s;
+}
+#music-toggle:hover { background: rgba(255,255,255,0.4); }
+p { line-height: 1.6; font-weight: 300; }
